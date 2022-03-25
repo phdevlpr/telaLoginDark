@@ -1,37 +1,180 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça login<br> E entre para nosso time</h1>
+            <img src="assets/astronaut-animate.svg" class="image" alt="astronaut-animate">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="user">Usuário</label>
+                    <input type="text" name="user" placeholder="Usuário">
+                <div class="textfield">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" placeholder="Senha">
 
-You can use the [editor on GitHub](https://github.com/phdevlpr/telaLoginDark/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+                </div>
+                <button class="btn-login">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
 
-# Header 1
-## Header 2
-### Header 3
+body * {
+    box-sizing: border-box;
+}
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-- Bulleted
-- List
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-1. Numbered
-2. List
+.left-login > h1 {
+    font-size: 3vw;
+    color: #77ffc0;
+}
 
-**Bold** and _Italic_ and `Code` text
+.image {
+    width: 35vw;
+}
 
-[Link](url) and ![Image](src)
-```
+.right-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+.card-login {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
 
-### Jekyll Themes
+.card-login > h1 {
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/phdevlpr/telaLoginDark/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0;
+}
 
-### Support or Contact
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+
+}
+
+.textfield > input::placeholder {
+    color: #f0ffff94;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.btn-login:hover {
+    background: #a202ff4f;
+    color: #f0ffffde;
+    box-shadow: 0px 10px 40px -12px #722bce;
+}
+
+@media only screen and (max-width: 950px){
+    .card-login {
+        width: 85%;
+}
+
+@media only screen and (max-width: 950px){
+    .main-login {
+        flex-direction: column;        
+    }
+    .left-login > h1 {
+        display: none;
+    }
+    .left-login,
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .image {
+        width: 80vw;
+    }
+    
+    .card-login {
+        width: 90%;
+    }
+}
+
